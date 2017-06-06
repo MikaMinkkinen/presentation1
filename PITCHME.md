@@ -1,10 +1,6 @@
-![LOGO](https://d1z75bzl1vljy2.cloudfront.net/img/gp-logo.png)
-
-#### Github Pages
-
 How to get simple blog up and running using
 # Jekyll & Gulp
-with big help from [Aaron Lasseigne](https://aaronlasseigne.com/2016/02/03/using-gulp-with-jekyll/)
+
 
 ---
 
@@ -59,16 +55,11 @@ Getting started:
 
 ---
 
+### 3. Gulp
 
-<span style="color: #e49436">STEP 3. GET THE WORD OUT!</span>
+Implement Gulp
 
-<br>
-
-<span style="font-size: 1.3em;"><span style="color:white">htt</span><span style="color:white">ps://git</span><span style="color: #e49436">pitch</span><span style="color: white">.com/<span style="color: #e49436">user</span>/<span style="color: #e49436">repo</span>/<span style="color: #e49436">branch</span></span>
-
-<br>
-
-Instantly use your GitPitch slideshow URL to promote, pitch or present absolutely anything.
+Detailed instruction from [Aaron Lasseigne](https://aaronlasseigne.com/2016/02/03/using-gulp-with-jekyll/)
 
 ---
 

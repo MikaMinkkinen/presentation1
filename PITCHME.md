@@ -28,8 +28,10 @@ detailed instruction from [Github](https://pages.github.com/)
 
 You’ll need Ruby as a development enviroment
 <br>
-1. Install Ruby & RubyGems
-2. Install Ruby gems Jekyll & Jekyll bundler
+1. GNU/Linux, Unix, or macOS
+2. Ruby version 2.0 or above, including all development headers
+3. RubyGems
+4. GCC and Make (in case your system doesn’t have them installed, which you can check by running gcc -v and make -v in your system’s command line interface)
 
 
 Detailed instruction from [Jekyll](https://jekyllrb.com/docs/quickstart/)
@@ -56,17 +58,80 @@ Getting started:
 
 +++
 
-Now you have site up and running
 ![Vanilla blog](/img/vanilla-site.png)
 
 
 ---
 
-###### 2.2. Jekyll
+###### 2.2 Conclusion - What the hell happend?
 
-Implement Gulp
+1. Jekyll site is installed - where it is?
 
-Detailed instruction from [Aaron Lasseigne](https://aaronlasseigne.com/2016/02/03/using-gulp-with-jekyll/)
+```
+bundle show minima
+```
+
+
++++
+
+Minima directory structure
+
+```
+.
+├── _config.yml
+├── _data
+|   └── members.yml
+├── _drafts
+|   ├── begin-with-the-crazy-ideas.md
+|   └── on-simplicity-in-technology.md
+├── _includes
+|   ├── footer.html
+|   └── header.html
+├── _layouts
+|   ├── default.html
+|   └── post.html
+├── _posts
+|   ├── 2007-10-29-why-every-programmer-should-play-nethack.md
+|   └── 2009-04-26-barcamp-boston-4-roundup.md
+├── _sass
+|   ├── _base.scss
+|   └── _layout.scss
+├── _site
+├── .jekyll-metadata
+└── index.html # can also be an 'index.md' with valid YAML Frontmatter
+
+```
+
++++
+
+clone only nessessary files in new destination
+
+my directory structure
+
+```
+.
+├── _config.yml
+├── _data
+|   └── members.yml
+├── _drafts
+|   ├── begin-with-the-crazy-ideas.md
+|   └── on-simplicity-in-technology.md
+├── _includes
+|   ├── footer.html
+|   └── header.html
+├── _layouts
+|   ├── default.html
+|   └── post.html
+├── _posts
+|   ├── 2007-10-29-why-every-programmer-should-play-nethack.md
+|   └── 2009-04-26-barcamp-boston-4-roundup.md
+├── _sass
+|   ├── _base.scss
+|   └── _layout.scss
+├── _site
+├── .jekyll-metadata
+└── index.html # can also be an 'index.md' with valid YAML Frontmatter
+```
 
 ---
 

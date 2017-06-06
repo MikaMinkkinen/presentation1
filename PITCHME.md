@@ -29,13 +29,34 @@ detailed instruction from [Github](https://pages.github.com/)
 You’ll need Ruby as a development enviroment
 <br>
 1. GNU/Linux, Unix, or macOS
-2. Ruby version 2.0 or above, including all development headers
+2. Ruby version 2.0 or above
 3. RubyGems
-4. GCC and Make (in case your system doesn’t have them installed, which you can check by running gcc -v and make -v in your system’s command line interface)
+4. GCC and Make
 
++++
 
-Detailed instruction from [Jekyll](https://jekyllrb.com/docs/quickstart/)
+Install Ruby
+```
+brew install ruby
+```
 
++++
+
+Install RubyGems
+Read notes from [Rubygems.org](https://rubygems.org/pages/download#formats)
+
++++
+
+Install Jekyll and Bunlder trought RubyGems
+```
+gem install jekyll bundler
+```
+
++++
+Check that you have [GCC](https://gcc.gnu.org/install/) and [Make](https://www.gnu.org/software/make/)
+```
+$ gcc -v
+$ make -v
 ---
 
 ###### 2.1 Jekyll

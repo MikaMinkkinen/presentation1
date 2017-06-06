@@ -1,12 +1,10 @@
 ![LOGO](https://d1z75bzl1vljy2.cloudfront.net/img/gp-logo.png)
 
-#### Get the word out
-<br>
-<span style="color:gray">Markdown Presentations For Everyone</span>
-<br>
-<span style="color:gray">on</span>
-<br>
-<span style="color:gray">GitHub, GitLab and Bitbucket</span>
+#### Github Pages
+
+How to get simple blog up and running using
+# Jekyll & Gulp
+with big help from [Aaron Lasseigne](https://aaronlasseigne.com/2016/02/03/using-gulp-with-jekyll/)
 
 ---
 

@@ -8,34 +8,57 @@ with big help from [Aaron Lasseigne](https://aaronlasseigne.com/2016/02/03/using
 
 ---
 
-### GitPitch turns <span style="color: #e49436; text-transform: none">PITCHME.md</span> into interactive, online slideshows.
+### Content
+1. Github
+2. Jekyll
+3. Gulp
+
+---
+
+### 1. Github
+
+Just create new repository and name it:
+<span style="color:red">your_user_name</span>.github.io
+
+detailed instruction from [Github](https://pages.github.com/)
+
+
+---
+
+### 2. Jekyll
+
+You’ll need development enviroments
 <br>
-<span style="color:gray; font-size:0.6em;">[ JUST LIKE THIS ONE ]</span>
+1. Ruby & RubyGems
+2. Jekyll & Jekyll bundler (Ruby gems)
+
+
+Detailed instruction from [Jekyll](https://jekyllrb.com/docs/quickstart/)
 
 ---
 
-### No more <span style="color: #666666">Keynote.</span>
-### No more <span style="color: #666666">Powerpoint.</span>
-<br>
-### Just <span style="color: #e49436">Markdown</span>. Then <span style="color: #e49436">Git-Commit</span>.
+### 2.1 Jekyll
+
+Getting started:
+```
+# Install Jekyll and Bundler gems through RubyGems
+~ $ gem install jekyll bundler
+
+# Create a new Jekyll site at ./myblog
+~ $ jekyll new myblog
+
+# Change into your new directory
+~ $ cd myblog
+
+# Build the site on the preview server
+~/myblog $ bundle exec jekyll serve
+
+# Now browse to http://localhost:4000
+```
+
 
 ---
 
-<span style="color: #e49436">STEP 1. PITCHME.md</span>
-
-![MARKDOWN](https://d1z75bzl1vljy2.cloudfront.net/hello-world/markdown.png)
-
-Create GitPitch slideshow content using GitHub flavored Markdown in your favorite editor.
-
----
-
-<span style="color: #e49436">STEP 2. GIT-COMMIT</span>
-
-![TERMINAL](https://d1z75bzl1vljy2.cloudfront.net/hello-world/terminal.png)
-
-Git-commit on any branch and push your PITCHME.md to GitHub, GitLab or Bitbucket.
-
----
 
 <span style="color: #e49436">STEP 3. GET THE WORD OUT!</span>
 

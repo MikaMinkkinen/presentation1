@@ -53,10 +53,14 @@ gem install jekyll bundler
 ```
 
 +++
+
 Check that you have [GCC](https://gcc.gnu.org/install/) and [Make](https://www.gnu.org/software/make/)
+
 ```
 $ gcc -v
 $ make -v
+```
+
 ---
 
 ###### 2.1 Jekyll
@@ -84,9 +88,9 @@ Getting started:
 
 ---
 
-###### 2.2 Conclusion - What the hell happend?
+###### What the hell happend?
 
-1. Jekyll site is installed - where it is?
+1. Jekyll site is build - where it is?
 
 ```
 bundle show minima

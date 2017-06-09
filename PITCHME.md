@@ -127,37 +127,9 @@ Minima directory structure
 ├── _site
 ├── .jekyll-metadata
 └── index.html # can also be an 'index.md' with valid YAML Frontmatter
-
 ```
 
-+++
-
-clone only nessessary files in new destination
-
-my directory structure
-
-```
-.
-├── _config.yml
-├── _drafts
-|   ├── draft.md
-├── _includes
-|   ├── footer.html
-|   └── header.html
-├── _layouts
-|   ├── default.html
-|   └── post.html
-├── _posts
-|   ├── 2007-10-29-first-post.md
-├── _sass
-|   ├── _base.scss
-|   └── _layout.scss
-├── _site
-└── index.html
-```
-
----
-
+clone only necessary files in new destination
 
 ---
 

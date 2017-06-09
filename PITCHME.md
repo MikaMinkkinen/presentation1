@@ -55,7 +55,6 @@ gem install jekyll bundler
 +++
 
 Check that you have [GCC](https://gcc.gnu.org/install/) and [Make](https://www.gnu.org/software/make/)
-
 ```
 $ gcc -v
 $ make -v

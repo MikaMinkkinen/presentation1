@@ -221,7 +221,7 @@ gulp.task('default', ['css', 'jekyll', 'serve']);
 ### 5. Start development
 
 ```
-gulp
+$ gulp
 ```
 
 runs Gulp default task and Jekyll as a subprocess

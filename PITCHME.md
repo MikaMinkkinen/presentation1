@@ -13,8 +13,8 @@ flat stack and focus on content
 Use node modules and expad project features
 3. Gulp
 enjoy smooth development workflow
-5. Run and modify
-how to start development
+5. Start development
+how to run and modify project
 
 ---
 
@@ -218,12 +218,20 @@ gulp.task('default', ['css', 'jekyll', 'serve']);
 
 ---
 
-### 5. Run project
+### 5. Start development
 
 ```
 gulp
 ```
 
 runs Gulp default task and Jekyll as a subprocess
+
+1. add gems in Gemfile
+run
+```
+$ bundle install
+```
+
+
 
 ---

@@ -9,8 +9,12 @@ How to get simple blog up and running using
 free and powerfull hosting
 2. Jekyll
 flat stack and focus on content
+3. Node.js
+Use node modules and expad project features
 3. Gulp
 enjoy smooth development workflow
+5. Run and modify
+how to start development
 
 ---
 
@@ -87,9 +91,9 @@ Getting started:
 
 ---
 
-###### What the hell happend?
+###### 2.2 What the hell happend?
 
-1. Jekyll site is build - where it is?
+Jekyll site is build - where it is?
 
 ```
 bundle show minima
@@ -135,11 +139,8 @@ my directory structure
 ```
 .
 ├── _config.yml
-├── _data
-|   └── members.yml
 ├── _drafts
-|   ├── begin-with-the-crazy-ideas.md
-|   └── on-simplicity-in-technology.md
+|   ├── draft.md
 ├── _includes
 |   ├── footer.html
 |   └── header.html
@@ -147,14 +148,12 @@ my directory structure
 |   ├── default.html
 |   └── post.html
 ├── _posts
-|   ├── 2007-10-29-why-every-programmer-should-play-nethack.md
-|   └── 2009-04-26-barcamp-boston-4-roundup.md
+|   ├── 2007-10-29-first-post.md
 ├── _sass
 |   ├── _base.scss
 |   └── _layout.scss
 ├── _site
-├── .jekyll-metadata
-└── index.html # can also be an 'index.md' with valid YAML Frontmatter
+└── index.html
 ```
 
 ---
@@ -162,13 +161,97 @@ my directory structure
 
 ---
 
-### 3. Gulp
+### 3. Node.js
 
-Implement Gulp
+Start using Node.js
 
-Detailed instruction from [Aaron Lasseigne](https://aaronlasseigne.com/2016/02/03/using-gulp-with-jekyll/)
+```
+$ npm init
+```
+
+it creates package.json
+
++++
+
+Add some Node modules for this project
+
+```
+$ npm install --save-dev gulp
+$ npm install --save-dev gulp-concat
+$ npm install --save-dev gulp-sass
+$ npm install --save-dev gulp-util
+$ npm install --save-dev browser-sync
+```
 
 ---
 
-### Go for it.
-### Just add <span style="color: #e49436; text-transform: none">PITCHME.md</span> ;)
+### 4. Gulp
+
+Create gulpfile.js
+
+Detailed instruction from [Aaron Lasseigne](https://aaronlasseigne.com/2016/02/03/using-gulp-with-jekyll/)
+
++++
+
+```
+const child = require('child_process');
+const browserSync = require('browser-sync').create();
+
+const gulp = require('gulp');
+const concat = require('gulp-concat');
+const gutil = require('gulp-util');
+const sass = require('gulp-sass');
+
+const siteRoot = '_site';
+const cssFiles = '_css/**/*.?(s)css';
+
+gulp.task('css', () => {
+  gulp.src(cssFiles)
+    .pipe(sass())
+    .pipe(concat('all.css'))
+    .pipe(gulp.dest('assets'));
+});
+
+gulp.task('jekyll', () => {
+  const jekyll = child.spawn('jekyll', ['build',
+    '--watch',
+    '--incremental',
+    '--drafts'
+  ]);
+
+  const jekyllLogger = (buffer) => {
+    buffer.toString()
+      .split(/\n/)
+      .forEach((message) => gutil.log('Jekyll: ' + message));
+  };
+
+  jekyll.stdout.on('data', jekyllLogger);
+  jekyll.stderr.on('data', jekyllLogger);
+});
+
+gulp.task('serve', () => {
+  browserSync.init({
+    files: [siteRoot + '/**'],
+    port: 4000,
+    server: {
+      baseDir: siteRoot
+    }
+  });
+
+  gulp.watch(cssFiles, ['css']);
+});
+
+gulp.task('default', ['css', 'jekyll', 'serve']);
+```
+
+---
+
+### 5. Run project
+
+```
+gulp
+```
+
+runs Gulp default task and Jekyll as a subprocess
+
+---
